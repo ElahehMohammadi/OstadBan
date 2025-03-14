@@ -13,12 +13,18 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['composables']
   },
-
-  devServer: {
-    port: process.env.PORT
-  },
-
+// vite:{
+//     css: {
+//         preprocessorOptions: {
+//             scss: {
+//                 additionalData:
+//                     // '@import "@/assets/styles/variables/index.scss";'
+//             }
+//         }
+//     }
+// },
   components: [{path: '~/components', pathPrefix: false}],
+
   modules: [
     // Bootstrap Vue for UI components
     [
@@ -79,8 +85,8 @@ export default defineNuxtConfig({
 
   auth: {
     isEnabled: true,
-    baseURL: `${process.env.API_GATEWAY_URL}/api/`,
-    navigateUnauthenticatedTo: '/auth/signin',
+    // baseURL: `${process.env.API_GATEWAY_URL}/api/`,
+    // navigateUnauthenticatedTo: '/auth/signin',
     provider: {
       type: 'local',
       endpoints: {
@@ -98,5 +104,7 @@ export default defineNuxtConfig({
       appUrl: process.env.APP_URL,
       apiGatewayUrl: process.env.API_GATEWAY_URL
     }
-  }
+  },
+
+  compatibilityDate: '2025-03-14'
 });
