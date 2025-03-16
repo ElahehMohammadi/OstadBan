@@ -2,5 +2,6 @@
   <div>
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
+    ksjhdfkjsdhf
   </div>
 </template>
