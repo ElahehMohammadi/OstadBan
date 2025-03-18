@@ -1,0 +1,172 @@
+/* customized bootstrap variables */
+
+@use 'sass:map';
+
+// modify spacer helpers. each number represent 4px. up to 6 helper
+$spacers: ();
+$spacers: map.merge(
+  $spacers,
+  (
+    0: 0
+  )
+);
+@for $i from 1 through 6 {
+  $spacers: map.merge(
+    $spacers,
+    (
+      $i: (
+          $i * 4px
+        )
+    )
+  );
+}
+
+// custom spacer helper
+$spacers: map.merge(
+  $spacers,
+  (
+    8: 32px,
+    10: 40px,
+    12: 48px,
+    16: 64px,
+    20: 80px
+  )
+);
+
+// rewrite general style variables
+$enable-caret: false;
+
+// rewrite body variables
+$body-color: $secondary;
+$body-bg: $white;
+
+// rewrite base styles
+$font-family-base: iransansx;
+$font-size-base: 1rem; // 16px
+$font-weight-base: $font-weight-normal;
+$line-height-base: 2;
+$h1-font-size: $font-size-base * 1.5; // 24px
+$h2-font-size: $font-size-base * 1.375; // 22px
+$h3-font-size: $font-size-base * 1.25; // 20px
+$h4-font-size: $font-size-base * 1.125; // 18px
+$h5-font-size: $font-size-base; // 16px
+$h6-font-size: $font-size-base * 0.875; // 14px
+
+$hr-border-color: $secondary;
+$hr-border-width: 2px;
+$transition-base: all 300ms ease-in-out;
+$transition-fade: opacity 150ms linear;
+$transition-collapse: height 300ms ease;
+$transition-collapse-width: width 300ms ease;
+$border-radius: 10px;
+$border-width: 1px;
+$border-color: $gray-1;
+
+// override grid values
+$grid-gutter-width: 16px;
+
+// rewrite variables for custom radio input
+$custom-radio-indicator-border-radius: 3px;
+$custom-control-indicator-focus-border-color: 1px solid $gray-3;
+
+// rewrite variables for custom chechbox input
+$custom-checkbox-indicator-border-radius: 3px;
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 8 8'><path fill='#{$secondary}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default;
+$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$secondary}' d='M0 2h4'/></svg>") !default;
+$enable-validation-icons: false;
+
+// rewrite breadcrumb variables
+$breadcrumb-item-padding: 0.5rem;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0.75rem;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $gray-5;
+$breadcrumb-active-color: $gray-5;
+
+// eslint-disable-next-line
+$breadcrumb-divider: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzY0IC0yNTIpIj48cGF0aCBkPSJNNy44NDUsMTcuMzM3YS43NDIuNzQyLDAsMCwxLS41My0uMjJMLjc5NSwxMC42YTIuNzQsMi43NCwwLDAsMSwwLTMuODZMNy4zMTUuMjE4YS43NS43NSwwLDAsMSwxLjA2LDEuMDZMMS44NTUsNy44YTEuMjMxLDEuMjMxLDAsMCwwLDAsMS43NGw2LjUyLDYuNTJhLjc1NC43NTQsMCwwLDEsMCwxLjA2QS43ODYuNzg2LDAsMCwxLDcuODQ1LDE3LjMzN1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3MS4xNTUgMjU1LjMzMykiIGZpbGw9IiM3Nzc3NzciLz48cGF0aCBkPSJNMCwwSDI0VjI0SDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNjQgMjUyKSIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMCIvPjwvZz48L3N2Zz4NCg==');
+
+// rewrite modal variables
+$modal-backdrop-bg: rgba(0, 0, 0, 20%);
+$modal-backdrop-opacity: 1;
+$modal-header-padding-y: 0;
+$modal-header-padding-x: 4rem;
+$modal-inner-padding: 1.5rem;
+$modal-fade-transform: none;
+
+// rewrite badge variables
+$badge-font-size: 1rem;
+$badge-font-weight: $font-weight-bold;
+$badge-padding-y: 8px;
+$badge-padding-x: 12px;
+$badge-border-radius: 10px;
+
+// rewrite popover variables
+$popover-bg: $white;
+$popover-max-width: 290px;
+$popover-border-width: 0;
+$popover-border-color: transparent;
+$popover-border-radius: 15px 15px 15px 25px;
+$popover-header-bg: $white;
+$popover-header-color: $secondary;
+$popover-header-padding-y: 12px;
+$popover-header-padding-x: 16px;
+$popover-body-color: $secondary;
+$zindex-popover: 1035;
+
+// rewrite tooltip variables
+$tooltip-font-size: $font-12;
+$tooltip-max-width: 264px;
+$tooltip-color: $white;
+$tooltip-bg: $gray-6;
+$tooltip-border-radius: 6px;
+$tooltip-opacity: 1;
+$tooltip-padding-y: 6px;
+$tooltip-padding-x: 8px;
+$tooltip-arrow-width: 1rem;
+$tooltip-arrow-height: 0.4rem;
+
+// rewrite pagination variables
+$pagination-line-height: 0;
+$pagination-focus-box-shadow: none;
+$pagination-focus-outline: none;
+$pagination-color: $gray-5;
+$pagination-border-width: 0;
+$pagination-border-color: transparent;
+$pagination-hover-color: $secondary;
+$pagination-hover-bg: $gray-1;
+$pagination-hover-border-color: transparent;
+$pagination-active-color: $secondary;
+$pagination-active-bg: $secondary;
+
+// rewrite dropdown variables
+// Do this, after creating base dropdown component
+$zindex-dropdown: 1200;
+
+// spacers
+$spacer: 1rem !default;
+
+// grid variables
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$grid-xs: map.get($grid-breakpoints, 'xs');
+$grid-sm: map.get($grid-breakpoints, 'sm');
+$grid-md: map.get($grid-breakpoints, 'md');
+$grid-lg: map.get($grid-breakpoints, 'lg');
+$grid-xl: map.get($grid-breakpoints, 'xl');
+
+// custom max-width of containers
+$container-max-widths: (
+  xs: 100%,
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1136px
+);

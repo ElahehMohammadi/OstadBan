@@ -1,28 +1,40 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  devtools: { enabled: true },
+import {resolve} from "path";
 
+export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'fa-IR', dir: 'rtl' },
       title: process.env.APP_NAME || 'My App',
-      meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }]
+      meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+      link: [{ rel: "icon", href: "/icons/BaseLogo.svg" }]
     }
   },
 
+  devtools: { enabled: true },
+
+  // alias: {
+  //   assets: resolve(__dirname, "assets"),
+  //   icons: resolve(__dirname, "assets", "icons"),
+  //   "@": resolve(__dirname),
+  // },
   imports: {
     dirs: ['composables']
   },
-// vite:{
-//     css: {
-//         preprocessorOptions: {
-//             scss: {
-//                 additionalData:
-//                     // '@import "@/assets/styles/variables/index.scss";'
-//             }
-//         }
-//     }
-// },
+
+  css: ['assets/styles/index.scss'],
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData:
+              '@import "@/assets/styles/variables/index.scss"; @import "@/assets/styles/customBootstrapStyles/_custom_variables.scss"; @import "@/assets/styles/mixins/index.scss";'
+        }
+      }
+    }
+  },
+
   components: [{path: '~/components', pathPrefix: false}],
 
   modules: [
@@ -72,8 +84,6 @@ export default defineNuxtConfig({
     'dayjs-nuxt'
   ],
 
-  // https://nuxt.com/docs/api/nuxt-config#css
-  css: ['assets/styles/index.scss'],
 
   // https://nuxt.com/docs/guide/concepts/typescript#type-checking
   typescript: {
@@ -106,5 +116,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2025-03-14'
+  compatibilityDate: '2025-03-18',
 });

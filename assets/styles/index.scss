@@ -1,4 +1,21 @@
-body{
-  background-color: aliceblue;
-}
+/* import fonts */
+@import 'theme/fonts';
 
+/* import customized bootstrap styles */
+@import 'customBootstrapStyles/index';
+
+/* import custom components styles */
+@import 'moduleStyles/index';
+
+/* import reset style */
+@import 'assets/styles/theme/reset';
+
+/* import global styles */
+@import 'assets/styles/theme/styles';
+
+/* import font classes */
+@import 'theme/fonts_classes';
+
+
+/* import color styles */
+@import 'theme/colors.classes';

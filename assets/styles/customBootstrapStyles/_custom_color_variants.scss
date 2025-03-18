@@ -1,0 +1,23 @@
+
+// Remove extra map variants from Bootstrap
+// `map-remove` removes unwanted color variants
+$theme-colors: map-remove($theme-colors, 'info', 'light', 'dark');
+
+// Custom color variants from your palette
+$custom-colors: (
+        'primary': $primary,
+        'secondary': $secondary,
+        'success': $circle-success, // Use the vibrant green success color for Bootstrap success
+        'warning': $circle-warning, // Use circle warning color for Bootstrap warning
+        'danger': $danger,
+        'suggestion-color': $suggestion-color, // Custom color for suggestions
+        'info': $circle-info, // Updated info color to vibrant blue
+        'gold': $circle-gold // Add a premium gold color as an extra option
+);
+
+// Merge custom colors with the default ones
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Optional: Remove light/dark variants if needed (already applied above)
+// stylelint-disable-next-line
+$theme-colors: map-remove($theme-colors, 'light', 'dark');

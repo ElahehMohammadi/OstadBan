@@ -1,0 +1,72 @@
+// import iziToast main styles
+@import 'izitoast/dist/css/iziToast.min.css';
+
+// custom iziToast styles
+.iziToast {
+  box-shadow: $box-shadow;
+  padding: 12px 0 12px 16px !important;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 10px;
+
+  /* Variants */
+  &.iziToast-color-green {
+    border: 2px solid $success;
+    box-shadow: 5px 5px 15px rgba($success, 0.16);
+
+    .iziToast-icon {
+      background-color: $success;
+    }
+  }
+
+  &.iziToast-color-orange {
+    border: 2px solid $warning;
+    box-shadow: 5px 5px 15px rgba($warning, 0.16);
+
+    .iziToast-icon {
+      background-color: $warning;
+    }
+  }
+
+  &.iziToast-color-red {
+    border: 2px solid $danger;
+    box-shadow: 5px 5px 15px rgba($danger, 0.16);
+
+    .iziToast-icon {
+      background-color: $danger;
+    }
+  }
+
+  .iziToast-body {
+    margin: 0 !important;
+    padding: 0 20px 0 0 !important;
+    display: flex;
+    align-items: center;
+    min-height: 24px !important;
+    line-height: 1 !important;
+  }
+
+  .iziToast-texts {
+    margin: 0 20px 0 0 !important;
+
+    .iziToast-title {
+      line-height: 1.5 !important;
+    }
+  }
+
+  .iziToast-icon {
+    width: 28px !important;
+    height: 28px !important;
+    color: $white !important;
+    top: 0 !important;
+    margin-top: -2px !important;
+    padding: 4px;
+    border-radius: 5px 0 0 5px;
+    line-height: 1 !important;
+  }
+
+  &::after {
+    box-shadow: none;
+  }
+}
