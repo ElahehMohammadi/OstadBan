@@ -1,0 +1,78 @@
+/* global variables */
+
+/* color palettes */
+// main colors
+$primary: #205781;
+$secondary: #609966;
+$primary-green: #BBD3BE;
+$secondary-green: #DDE5DB;
+$highlight: #4F959D;
+$accent: #609966;
+$neutral-green: #90B894;
+$soft-green: #98D2C0;
+$suggestion-color: #22C55E;
+$success: #25b577;
+$warning: #fca018;
+$danger: #f34158;
+$info: #0062fe;
+
+/* circle colors */
+$circle-success: #22C55E;
+$circle-info: #3B82F6;
+$circle-gold: #D4AF37;
+$circle-warning: #F59E0B;
+
+/* shade colors */
+// shades of primary
+$primary-shade-1: lighten(#83CBB5, 20%);
+$primary-shade-2: lighten(#83CBB5, 40%);
+
+// shades of secondary
+$secondary-shade-1: lighten(#91A7FF, 20%);
+$secondary-shade-2: lighten(#91A7FF, 40%);
+
+// shades of primary-green
+$primary-green-shade-1: lighten(#BBD3BE, 20%);
+$primary-green-shade-2: lighten(#BBD3BE, 40%);
+
+// shades of secondary-green
+$secondary-green-shade-1: lighten(#DDE5DB, 20%);
+$secondary-green-shade-2: lighten(#DDE5DB, 40%);
+
+// shades of highlight
+$highlight-shade-1: lighten(#4F959D, 20%);
+$highlight-shade-2: lighten(#4F959D, 40%);
+
+// shades of accent
+$accent-shade-1: lighten(#609966, 20%);
+$accent-shade-2: lighten(#609966, 40%);
+
+// shades of neutral-green
+$neutral-green-shade-1: lighten(#90B894, 20%);
+$neutral-green-shade-2: lighten(#90B894, 40%);
+
+// shades of soft-green
+$soft-green-shade-1: lighten(#98D2C0, 20%);
+$soft-green-shade-2: lighten(#98D2C0, 40%);
+
+/* grayscale colors */
+$white: #fff;
+$gray-1: #f2f2f2;
+$gray-2: #e6e6e6;
+$gray-3: #dbdbdb;
+$gray-4: #9d9d9d;
+$gray-5: #777;
+$gray-6: #4a4a4a;
+$black: #000;
+
+/* gradient colors */
+$main-gradient: linear-gradient(
+                90deg,
+                $primary 0%,
+                $secondary 20%,
+                $accent 40%,
+                $highlight 60%,
+                $primary-green 80%,
+                $secondary-green 100%
+);
+$gamification-gradient: linear-gradient(270deg, $primary 0%, $accent 100%);

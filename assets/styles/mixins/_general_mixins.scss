@@ -1,0 +1,133 @@
+/* general mixins */
+
+// line-clamp and text-overflow mixins
+@mixin text-overflow-ellipsis($max-width) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: $max-width;
+
+  /* stylelint-disable-next-line */
+  display: -webkit-box;
+}
+
+@mixin line-clamp($line-number) {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $line-number;
+
+  /* stylelint-disable-next-line */
+  display: -webkit-box;
+}
+
+// media queries mixins
+@mixin only-mobile-rule {
+  @media screen and (max-width: $grid-lg) {
+    @content;
+  }
+}
+
+@mixin only-tablet-rule {
+  @media screen and (min-width: $grid-md) and (max-width: $grid-lg) {
+    @content;
+  }
+}
+
+@mixin only-desktop-rule {
+  @media screen and (min-width: $grid-lg) {
+    @content;
+  }
+}
+
+@mixin sm-rule {
+  @media screen and (max-width: $grid-sm) {
+    @content;
+  }
+}
+
+@mixin md-rule {
+  @media screen and (max-width: $grid-md) {
+    @content;
+  }
+}
+
+@mixin md-min-rule {
+  @media screen and (min-width: $grid-md) {
+    @content;
+  }
+}
+
+@mixin xl-rule {
+  @media screen and (max-width: $grid-xl) {
+    @content;
+  }
+}
+
+@mixin xl-min-rule {
+  @media screen and (min-width: $grid-xl) {
+    @content;
+  }
+}
+
+// default scrollable bar
+@mixin small-scrollbar($thumb-color: $secondary, $thumb-radius: 15px, $track-color: $gray-3) {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $thumb-radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $track-color;
+    margin: 4px 0 4px -5px !important;
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+@mixin transition-style($property: all, $duration: 500ms, $timing-function: ease-in-out) {
+  transition: $property $duration $timing-function;
+}
+
+@mixin font-style($weight, $size, $font-family: iransansx) {
+  font-family: $font-family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height-base;
+}
+
+@mixin nuxt-link-style {
+  color: $secondary;
+  text-decoration: none;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin global-line-style($color: $gray-2, $width: 2px) {
+  border-top: $width solid $color;
+  opacity: 1;
+}
+
+@mixin label-text($top, $right, $z-index: 1) {
+  color: $gray-6;
+  position: absolute;
+  top: $top;
+  right: $right;
+  z-index: $z-index;
+  transition:
+    top 0.2s,
+    right 0.2s,
+    color 0.2s;
+
+  &.focused {
+    color: $secondary;
+    top: 0;
+    right: 0;
+  }
+}

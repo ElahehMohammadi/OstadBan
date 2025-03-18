@@ -1,0 +1,49 @@
+/* general variables */
+
+// shadow variable
+$box-shadow: 40px 24px 40px 0 rgba(0, 0, 0, 4%);
+$modal-box-shadow: 0 0 32px 0 rgba($secondary, 24%);
+
+// transition style
+$global-transition: all 0.3s ease-in-out;
+
+// backdrop style
+$base-backdrop-color: rgba($gray-6, 60%);
+
+/* fonts variables */
+// font-sizes
+$font-10: 0.625rem;
+$font-12: 0.75rem;
+$font-14: 0.875rem;
+$font-16: 1rem;
+$font-18: 1.125rem;
+$font-20: 1.25rem;
+$font-22: 1.375rem;
+$font-24: 1.5rem;
+$font-26: 1.625rem;
+$font-28: 1.75rem;
+$font-30: 1.875rem;
+$font-32: 2rem;
+$font-40: 2.5rem;
+$font-48: 3rem;
+
+// font-weight
+$font-weight-lighter: lighter !default; // 100
+$font-weight-light: 300 !default;
+$font-weight-normal: normal !default; // 400
+$font-weight-medium: 500 !default;
+$font-weight-demibold: 600 !default;
+$font-weight-bold: bold !default; // 700
+$font-weight-extrabold: 800 !default;
+$font-weight-black: 900 !default;
+$font-weight-extrablack: 950 !default;
+$font-weight-heavy: 1000 !default;
+
+// card variables
+$card-border-radius: 42px;
+$card-border: 10px solid rgba(255, 255, 255, 40%);
+$card-background-color: $white;
+$card-box-shadow: $box-shadow;
+
+// article variables
+$article-line-height: 2.4;

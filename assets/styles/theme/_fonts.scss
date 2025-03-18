@@ -1,0 +1,194 @@
+// fonts
+
+/* IranSans */
+
+/*
+IranSansX fonts are considered a proprietary software. To gain information about the laws
+regarding the use of these fonts, please visit www.fontiran.com
+---------------------------------------------------------------------
+This set of fonts are used in this project under the license: (KUW63K)
+---------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family: iransansx;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansXFaNum/Woff/IRANSansXFaNum-Medium.woff') format('woff'),
+    url('assets/fonts/IranSansXFaNum/Woff2/IRANSansXFaNum-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansx;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansXFaNum/Woff/IRANSansXFaNum-DemiBold.woff') format('woff'),
+    url('assets/fonts/IranSansXFaNum/Woff2/IRANSansXFaNum-DemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansx;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansXFaNum/Woff/IRANSansXFaNum-ExtraBold.woff') format('woff'),
+    url('assets/fonts/IranSansXFaNum/Woff2/IRANSansXFaNum-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansx;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansXFaNum/Woff/IRANSansXFaNum-Black.woff') format('woff'),
+    url('assets/fonts/IranSansXFaNum/Woff2/IRANSansXFaNum-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansx;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansXFaNum/Woff/IRANSansXFaNum-Bold.woff') format('woff'),
+    url('assets/fonts/IranSansXFaNum/Woff2/IRANSansXFaNum-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansx;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansXFaNum/Woff/IRANSansXFaNum-Regular.woff') format('woff'),
+    url('assets/fonts/IranSansXFaNum/Woff2/IRANSansXFaNum-Regular.woff2') format('woff2');
+}
+
+/* Iransans English */
+@font-face {
+  font-family: iransansEn;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansEn/Woff/IRANSansX-Medium.woff') format('woff'),
+    url('assets/fonts/IranSansEn/Woff2/IRANSansX-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansEn;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansEn/Woff/IRANSansX-DemiBold.woff') format('woff'),
+    url('assets/fonts/IranSansEn/Woff2/IRANSansX-DemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansEn;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansEn/Woff/IRANSansX-ExtraBold.woff') format('woff'),
+    url('assets/fonts/IranSansEn/Woff2/IRANSansX-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansEn;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansEn/Woff/IRANSansX-Black.woff') format('woff'),
+    url('assets/fonts/IranSansEn/Woff2/IRANSansX-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansEn;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansEn/Woff/IRANSansX-Bold.woff') format('woff'),
+    url('assets/fonts/IranSansEn/Woff2/IRANSansX-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iransansEn;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranSansEn/Woff/IRANSansX-Regular.woff') format('woff'),
+    url('assets/fonts/IranSansEn/Woff2/IRANSansX-Regular.woff2') format('woff2');
+}
+
+/* IranYekanX */
+@font-face {
+  font-family: iranyekanx;
+  font-style: normal;
+  font-weight: 950;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranYekanXFaNum/Woff/IRANYekanXFaNum-ExtraBlack.woff') format('woff'),
+    url('assets/fonts/IranYekanXFaNum/Woff2/IRANYekanXFaNum-ExtraBlack.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: iranyekanx;
+  font-style: normal;
+  font-weight: 1000;
+  font-display: swap;
+  src:
+    url('assets/fonts/IranYekanXFaNum/Woff/IRANYekanXFaNum-Heavy.woff') format('woff'),
+    url('assets/fonts/IranYekanXFaNum/Woff2/IRANYekanXFaNum-Heavy.woff2') format('woff2');
+}
+
+/* global fonts class */
+.font-iransansx {
+  font-family:
+    iransansx,
+    iransansEn,
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Arial,
+    sans-serif !important;
+}
+
+.font-iransans-english {
+  font-family:
+    iransansEn,
+    iransansx,
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Arial,
+    sans-serif !important;
+}
+
+.font-iranyekanx {
+  font-family:
+    iranyekanx,
+    iransansx,
+    iransansEn,
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Arial,
+    sans-serif !important;
+}

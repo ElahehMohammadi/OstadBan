@@ -1,0 +1,34 @@
+/* order of imports are important */
+
+// import custom bootstrap variables first
+@import 'custom_variables';
+
+// import bootstrap rtl classes
+@import 'bootstrap_rtl';
+
+// import default bootstrap and bootstrap-vue styles
+@import 'main_bootstrap_styles';
+
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  padding: 0;
+
+  @include only-tablet-rule {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include md-rule {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include sm-rule {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
