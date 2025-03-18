@@ -23,7 +23,7 @@
 
     &:hover,
     &.active {
-      color: $primary-blue;
+      color: $primary;
       font-weight: $font-weight-bold;
     }
 
@@ -43,7 +43,7 @@
     width: 16px;
     height: 2px;
     border-radius: 1px;
-    background-color: $primary-blue;
+    background-color: $primary;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);

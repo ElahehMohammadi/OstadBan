@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, type PropType } from "vue";
-import avatarFallback from "assets/imgs/svg/avatar-fallback.svg";
+import avatarFallback from "assets/imgs/logo/logo.svg";
 
 // Props
 const props = defineProps({
@@ -76,7 +76,7 @@ const onLoadError = () => (avatarNotLoaded.value = true);
 <style
   scoped
   lang="scss"
-  src="assets/styles/baseComponents/BaseAvatar.scss"
+  src="assets/styles/components/Base/BaseAvatar.scss"
 ></style>
 
 <style lang="scss" scoped>

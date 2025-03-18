@@ -1,14 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {resolve} from "path";
+import { resolve } from "path";
 
 export default defineNuxtConfig({
   app: {
     head: {
-      htmlAttrs: { lang: 'fa-IR', dir: 'rtl' },
-      title: process.env.APP_NAME || 'My App',
-      meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-      link: [{ rel: "icon", href: "/icons/BaseLogo.svg" }]
-    }
+      htmlAttrs: { lang: "fa-IR", dir: "rtl" },
+      title: process.env.APP_NAME || "My App",
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+      link: [{ rel: "icon", href: "/icons/BaseLogo.svg" }],
+    },
   },
 
   devtools: { enabled: true },
@@ -19,102 +21,101 @@ export default defineNuxtConfig({
   //   "@": resolve(__dirname),
   // },
   imports: {
-    dirs: ['composables']
+    dirs: ["composables"],
   },
 
-  css: ['assets/styles/index.scss'],
-
+  css: ["assets/styles/index.scss"],
+  plugins: ["@/plugins/phosphor-icons.js"],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
           additionalData:
-              '@import "@/assets/styles/variables/index.scss"; @import "@/assets/styles/customBootstrapStyles/_custom_variables.scss"; @import "@/assets/styles/mixins/index.scss";'
-        }
-      }
-    }
+            '@import "@/assets/styles/variables/index.scss"; @import "@/assets/styles/customBootstrapStyles/_custom_variables.scss"; @import "@/assets/styles/mixins/index.scss";',
+        },
+      },
+    },
   },
 
-  components: [{path: '~/components', pathPrefix: false}],
+  components: [{ path: "~/components", pathPrefix: false }],
 
   modules: [
     // Bootstrap Vue for UI components
     [
-      '@bootstrap-vue-next/nuxt',
+      "@bootstrap-vue-next/nuxt",
       {
         // Will include everything except useBreadcrumb & useColorMode
         composables: {
           useBreadcrumb: false,
           useColorMode: false,
-          all: true
-        }
-      }
+          all: true,
+        },
+      },
     ],
 
     // Pinia for state management
-    '@pinia/nuxt',
+    "@pinia/nuxt",
 
     // Device detection (mobile vs. desktop)
-    '@nuxtjs/device',
+    "@nuxtjs/device",
 
     // Form validation
     [
-      '@vee-validate/nuxt',
+      "@vee-validate/nuxt",
       {
         // https://vee-validate.logaretm.com/v4/guide/overview/
         // disable or enable auto imports
         autoImports: false,
         // Use different names for components
         componentNames: {
-          Form: 'VeeForm',
-          Field: 'VeeField',
-          FieldArray: 'VeeFieldArray',
-          ErrorMessage: 'VeeErrorMessage'
-        }
-      }
+          Form: "VeeForm",
+          Field: "VeeField",
+          FieldArray: "VeeFieldArray",
+          ErrorMessage: "VeeErrorMessage",
+        },
+      },
     ],
 
     // Icons for easy UI design
-    'nuxt-icons',
+    "nuxt-icons",
 
     // Nuxt authentication module
-    '@sidebase/nuxt-auth',
+    "@sidebase/nuxt-auth",
 
     // Day.js for handling dates and times
-    'dayjs-nuxt'
+    "dayjs-nuxt",
   ],
-
 
   // https://nuxt.com/docs/guide/concepts/typescript#type-checking
   typescript: {
-    typeCheck: true
+    typeCheck: true,
   },
 
   // https://nuxt.com/docs/api/nuxt-config#extensions
-  extensions: ['.js', '.mjs', '.ts', '.vue'],
+  extensions: [".js", ".mjs", ".ts", ".vue"],
 
   auth: {
     isEnabled: true,
     // baseURL: `${process.env.API_GATEWAY_URL}/api/`,
     // navigateUnauthenticatedTo: '/auth/signin',
     provider: {
-      type: 'local',
+      type: "local",
       endpoints: {
-        signIn: { path: 'login', method: 'post' },
-        signOut: { path: 'logout', method: 'post' },
-        signUp: { path: 'register', method: 'post' },
-        getSession: { path: 'user', method: 'get' }
-      }
-    }
+        signIn: { path: "login", method: "post" },
+        signOut: { path: "logout", method: "post" },
+        signUp: { path: "register", method: "post" },
+        getSession: { path: "user", method: "get" },
+      },
+    },
   },
 
   runtimeConfig: {
     public: {
       appName: process.env.APP_NAME,
       appUrl: process.env.APP_URL,
-      apiGatewayUrl: process.env.API_GATEWAY_URL
-    }
+      apiGatewayUrl: process.env.API_GATEWAY_URL,
+    },
   },
 
-  compatibilityDate: '2025-03-18',
+  compatibilityDate: "2025-03-18",
 });

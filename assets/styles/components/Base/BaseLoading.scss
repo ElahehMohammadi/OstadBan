@@ -1,0 +1,149 @@
+// Baseloading components styles
+
+.base-loading {
+  background-color: rgba(0, 0, 0, 30%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1022;
+  inset: 0;
+
+  .loading-box {
+    background-color: $white;
+    border-radius: 16px;
+    padding: 32px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 16px 0 rgba($secondary, 16%);
+
+    .loading-logo-container {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 40px;
+
+      .name-logo {
+        height: inherit;
+        position: absolute;
+      }
+
+      .yellow-box {
+        width: 38px;
+        height: 38px;
+        background-color: $primary;
+        border-radius: 10px;
+        animation: yellow-box-move 2s infinite;
+        position: absolute;
+        right: 0;
+        bottom: 0.703px;
+      }
+
+      .loading-img {
+        z-index: 1000;
+      }
+
+      @keyframes yellow-box-move {
+        0% {
+          border-radius: 10px;
+        }
+
+        20% {
+          border-radius: 30px 10px 10px;
+        }
+
+        40% {
+          border-radius: 10px 10px 30px;
+        }
+
+        60% {
+          border-radius: 10px 30px 10px 10px;
+        }
+
+        80% {
+          border-radius: 10px 10px 10px 30px;
+        }
+
+        100% {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .loading-spinner-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .spinner-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: $primary;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+          margin-left: 8px;
+        }
+
+        &.left-bullet {
+          animation: left-bullet-color 1.2s infinite linear;
+        }
+
+        &.middle-bullet {
+          animation: middle-bullet-color 1.2s infinite linear;
+        }
+
+        &.right-bullet {
+          animation: right-bullet-color 1.2s infinite linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes left-bullet-color {
+  0% {
+    background-color: $secondary;
+  }
+
+  50% {
+    background-color: $secondary-shade-1;
+  }
+
+  100% {
+    background-color: $secondary-shade-2;
+  }
+}
+
+@keyframes middle-bullet-color {
+  0% {
+    background-color: $secondary-shade-2;
+  }
+
+  50% {
+    background-color: $secondary;
+  }
+
+  100% {
+    background-color: $secondary-shade-1;
+  }
+}
+
+@keyframes right-bullet-color {
+  0% {
+    background-color: $secondary-shade-1;
+  }
+
+  50% {
+    background-color: $secondary-shade-2;
+  }
+
+  100% {
+    background-color: $secondary;
+  }
+}

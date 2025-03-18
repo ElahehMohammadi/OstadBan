@@ -64,19 +64,19 @@ const props = defineProps({
 const iconSize = computed(() => {
   switch (props.size) {
     case "sm":
-      return "18";
+      return 18;
 
     case "md":
-      return "20";
+      return 20;
 
     case "lg":
-      return "24";
+      return 24;
 
     case "xl":
-      return "32";
+      return 32;
 
     default:
-      return "24";
+      return 24;
   }
 });
 
@@ -96,6 +96,7 @@ defineEmits(["click"]);
     :link-target="linkTarget"
     @click="$emit('click')"
   >
+    <PhHandFist :size="32" />
     <component :is="icon" :size="iconSize" class="icon line-height-0" />
     <!--    <BaseTooltip v-if="id" :target="id" :variant="tooltipVariant" :placement="tooltipPlace">-->
     <!--      {{ tooltipTitle }}-->

@@ -88,7 +88,7 @@ watch(
             id="header-search-desktop"
             variant="tertiary"
             size="md"
-            icon="outline/search"
+            icon="PhMagnifyingGlass"
             @click="toggleSearchMenu"
           />
 
@@ -121,7 +121,7 @@ watch(
               <ButtonIcon
                 variant="tertiary"
                 size="md"
-                icon="outline/menu-1"
+                icon="PhList"
                 disabled
                 loading
               />
@@ -130,7 +130,7 @@ watch(
             <ButtonIcon
               variant="tertiary"
               size="md"
-              icon="outline/menu-1"
+              icon="PhList"
               @click="openSidebar"
             />
           </ClientOnly>
@@ -148,7 +148,7 @@ watch(
             id="header-search-tablet"
             variant="tertiary"
             size="md"
-            icon="outline/search"
+            icon="PhMagnifyingGlass"
             @click="toggleSearchMenu"
           />
 
@@ -178,7 +178,7 @@ watch(
               <ButtonIcon
                 variant="tertiary"
                 size="md"
-                icon="outline/menu-1"
+                icon="PhList"
                 disabled
                 loading
               />
@@ -187,7 +187,7 @@ watch(
             <ButtonIcon
               variant="tertiary"
               size="md"
-              icon="outline/menu-1"
+              icon="PhList"
               @click="openSidebar"
             />
           </ClientOnly>
@@ -204,7 +204,7 @@ watch(
             id="header-search-mobile"
             variant="tertiary"
             size="md"
-            icon="outline/search"
+            icon="PhMagnifyingGlass"
             @click="toggleSearchMenu"
           />
         </div>

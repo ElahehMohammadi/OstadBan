@@ -132,7 +132,7 @@ const textAlignClass = computed(() => {
   }
 
   .role-icon {
-    color: $primary-blue;
+    color: $primary;
     margin-right: 4px;
   }
 
