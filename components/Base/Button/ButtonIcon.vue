@@ -57,19 +57,19 @@ const props = defineProps({
 const iconSize = computed(() => {
   switch (props.size) {
     case 'sm':
-      return 'font-18';
+      return '18';
 
     case 'md':
-      return 'font-20';
+      return '20';
 
     case 'lg':
-      return 'font-24';
+      return '24';
 
     case 'xl':
-      return 'font-32';
+      return '32';
 
     default:
-      return 'font-24';
+      return '24';
   }
 });
 
@@ -89,11 +89,11 @@ defineEmits(['click']);
       :link-target="linkTarget"
       @click="$emit('click')"
   >
-    <nuxt-icon :name="icon" class="icon line-height-0" :class="iconSize" />
+    <component :is="icon" :size="iconSize" class="icon line-height-0"  />
     <!--    <BaseTooltip v-if="id" :target="id" :variant="tooltipVariant" :placement="tooltipPlace">-->
     <!--      {{ tooltipTitle }}-->
     <!--    </BaseTooltip>-->
   </BaseButton>
 </template>
 
-<style lang="scss" scoped src="assets/styles/baseComponents/ButtonIcon.scss"></style>
+<style lang="scss" scoped src="assets/styles/components/Base/Button/ButtonIcon.scss"></style>

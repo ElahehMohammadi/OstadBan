@@ -1,0 +1,52 @@
+// NavigationItem component styles
+
+.navigation-item-container {
+  width: fit-content;
+  position: relative;
+
+  .navigation-item {
+    border: none;
+    background-color: transparent;
+    color: $secondary;
+    font-size: $font-14;
+    font-weight: $font-weight-medium;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow-icon {
+      transition: $global-transition;
+      margin-right: 4px;
+    }
+
+    &:hover,
+    &.active {
+      color: $primary-blue;
+      font-weight: $font-weight-bold;
+    }
+
+    &.visible {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .options-container {
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  .active-status {
+    width: 16px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $primary-blue;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -21px;
+  }
+}

@@ -110,4 +110,4 @@ defineEmits(['onClick']);
   </BButton>
 </template>
 
-<style lang="scss" scoped src="assets/styles/baseComponents/BaseButton.scss"></style>
+<style lang="scss" scoped src="assets/styles/components/Base/Button/BaseButton.scss"></style>
