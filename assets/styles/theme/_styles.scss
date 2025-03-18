@@ -18,12 +18,6 @@
 
 body {
   color: $secondary;
-
-  // stylelint-disable-next-line
-  ::selection {
-    background-color: $primary-shade-1;
-    color: $secondary;
-  }
 }
 
 .rtl {

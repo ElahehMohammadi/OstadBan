@@ -1,50 +1,70 @@
 <script setup lang="ts">
-import type {PropType} from 'vue';
+import type { PropType } from "vue";
 
 defineProps({
   title: {
     type: String as PropType<string>,
-    default: '',
-    required: true
+    default: "",
+    required: true,
   },
 
   icon: {
     type: String as PropType<string>,
-    default: ''
+    default: "",
   },
 
-  iconClass: {
+  iconSize: {
+    type: [Number, String] as PropType<number | string>,
+    default: null,
+  },
+
+  iconColor: {
     type: String as PropType<string>,
-    default: ''
+    default: null,
   },
 
   to: {
     type: String as PropType<string>,
-    default: undefined
+    default: undefined,
   },
 
   linkTarget: {
-    type: String as PropType<'_self' | '_blank'>,
-    default: '_self'
+    type: String as PropType<"_self" | "_blank">,
+    default: "_self",
   },
 
   active: {
     type: Boolean as PropType<boolean>,
-    default: false
-  }
+    default: false,
+  },
 });
 </script>
 
 <template>
-  <BButton class="menu-list-item" :class="{active: active}">
-    <nuxt-link v-if="to" :to="to" class="link-item text-decoration-none stretched-link" :target="linkTarget || '_self'">
-      <nuxt-icon v-if="icon" :name="icon" :class="iconClass" />
+  <BButton class="menu-list-item" :class="{ active: active }">
+    <nuxt-link
+      v-if="to"
+      :to="to"
+      class="link-item text-decoration-none stretched-link"
+      :target="linkTarget || '_self'"
+    >
+      <component
+        v-if="icon"
+        :is="icon"
+        :class="Number(iconSize)"
+        :color="`$${iconColor}`"
+      />
 
       <span class="list-item-text">{{ title }}</span>
     </nuxt-link>
 
     <template v-else>
-      <nuxt-icon v-if="icon" :name="icon" :class="iconClass" />
+      <component
+        v-if="icon"
+        :is="icon"
+        :class="iconSize"
+        :color="`$${iconColor}`"
+      />
 
       <span class="list-item-text">{{ title }}</span>
     </template>

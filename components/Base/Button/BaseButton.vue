@@ -1,57 +1,64 @@
 <script setup lang="ts">
-import type {ColorVariant, ButtonType, Size} from 'bootstrap-vue-next';
-import {computed, type PropType, useSlots} from 'vue';
+import type { ColorVariant, ButtonType, Size } from "bootstrap-vue-next";
+import { computed, type PropType, useSlots } from "vue";
 
 // Props
 const props = defineProps({
   variant: {
-    type: String as PropType<ColorVariant>,
-    default: 'primary',
+    type: String as PropType<ColorVariant | "tertiary">,
+    default: "primary",
     validator(value: string) {
-      return ['primary', 'secondary', 'tertiary', 'ghost', 'secondary-light', 'light'].includes(value);
-    }
+      return [
+        "primary",
+        "secondary",
+        "tertiary",
+        "ghost",
+        "secondary-light",
+        "light",
+      ].includes(value);
+    },
   },
 
   size: {
-    type: String as PropType<Size | 'xl'>,
-    default: 'lg',
+    type: String as PropType<Size | "xl">,
+    default: "lg",
     validator(value: string) {
-      return ['sm', 'md', 'lg', 'xl'].includes(value);
-    }
+      return ["sm", "md", "lg", "xl"].includes(value);
+    },
   },
 
   loading: {
     type: Boolean as PropType<boolean>,
-    default: false
+    default: false,
   },
 
   disabled: {
     type: Boolean as PropType<boolean>,
-    default: false
+    default: false,
   },
 
   block: {
     type: Boolean as PropType<boolean>,
-    default: false
+    default: false,
   },
 
   to: {
     type: String as PropType<string>,
-    default: null
+    default: null,
   },
 
   linkTarget: {
-    type: String as PropType<'_self' | '_blank'>,
-    default: '_self'
+    type: String as PropType<"_self" | "_blank">,
+    default: "_self",
   },
 
   buttonType: {
     type: String as PropType<ButtonType>,
-    default: 'button',
+    default: "button",
     validator(value: string) {
-      return ['button', 'submit', 'reset'].includes(value);
-    }
-  }
+      return ["button", "submit", "reset"].includes(value);
+    },
+  },
 });
 
 const slots = useSlots();
@@ -60,30 +67,30 @@ const slots = useSlots();
 const isLink = computed(() => props.to && !props.disabled);
 
 const classGenerator = computed(() => {
-  let finalClass = '';
+  let finalClass = "";
 
-  if (props.loading) finalClass += 'loading ';
-  if (slots.leftIcon) finalClass += 'left-icon ';
-  if (slots.rightIcon) finalClass += 'right-icon ';
-  if (props.block) finalClass += 'w-100 ';
+  if (props.loading) finalClass += "loading ";
+  if (slots.leftIcon) finalClass += "left-icon ";
+  if (slots.rightIcon) finalClass += "right-icon ";
+  if (props.block) finalClass += "w-100 ";
 
   return finalClass;
 });
 
 // Emits
-defineEmits(['onClick']);
+defineEmits(["onClick"]);
 </script>
 
 <template>
   <BButton
-      class="base-button"
-      :class="classGenerator"
-      :variant="variant"
-      :size="size as Size"
-      :type="buttonType"
-      :loading="loading"
-      :disabled="disabled"
-      @click="$emit('onClick', $event)"
+    class="base-button"
+    :class="classGenerator"
+    :variant="variant as ColorVariant"
+    :size="size as Size"
+    :type="buttonType"
+    :loading="loading"
+    :disabled="disabled"
+    @click="$emit('onClick', $event)"
   >
     <template #loading>
       <BSpinner small></BSpinner>
@@ -91,10 +98,10 @@ defineEmits(['onClick']);
 
     <template #default>
       <nuxt-link
-          v-if="isLink"
-          :to="to"
-          class="text-decoration-none stretched-link button-link-text"
-          :target="linkTarget"
+        v-if="isLink"
+        :to="to"
+        class="text-decoration-none stretched-link button-link-text"
+        :target="linkTarget"
       >
         <slot name="rightIcon" />
         <slot>عنوان لینک</slot>
@@ -110,4 +117,8 @@ defineEmits(['onClick']);
   </BButton>
 </template>
 
-<style lang="scss" scoped src="assets/styles/components/Base/Button/BaseButton.scss"></style>
+<style
+  lang="scss"
+  scoped
+  src="assets/styles/components/Base/Button/BaseButton.scss"
+></style>
