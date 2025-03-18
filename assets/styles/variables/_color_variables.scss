@@ -2,8 +2,8 @@
 
 /* color palettes */
 // main colors
-$primary: #205781;
-$secondary: #609966;
+$primary: #C4D1DC;
+$secondary: #052E4D;
 $primary-green: #BBD3BE;
 $secondary-green: #DDE5DB;
 $highlight: #4F959D;
@@ -22,38 +22,6 @@ $circle-info: #3B82F6;
 $circle-gold: #D4AF37;
 $circle-warning: #F59E0B;
 
-/* shade colors */
-// shades of primary
-$primary-shade-1: lighten(#83CBB5, 20%);
-$primary-shade-2: lighten(#83CBB5, 40%);
-
-// shades of secondary
-$secondary-shade-1: lighten(#91A7FF, 20%);
-$secondary-shade-2: lighten(#91A7FF, 40%);
-
-// shades of primary-green
-$primary-green-shade-1: lighten(#BBD3BE, 20%);
-$primary-green-shade-2: lighten(#BBD3BE, 40%);
-
-// shades of secondary-green
-$secondary-green-shade-1: lighten(#DDE5DB, 20%);
-$secondary-green-shade-2: lighten(#DDE5DB, 40%);
-
-// shades of highlight
-$highlight-shade-1: lighten(#4F959D, 20%);
-$highlight-shade-2: lighten(#4F959D, 40%);
-
-// shades of accent
-$accent-shade-1: lighten(#609966, 20%);
-$accent-shade-2: lighten(#609966, 40%);
-
-// shades of neutral-green
-$neutral-green-shade-1: lighten(#90B894, 20%);
-$neutral-green-shade-2: lighten(#90B894, 40%);
-
-// shades of soft-green
-$soft-green-shade-1: lighten(#98D2C0, 20%);
-$soft-green-shade-2: lighten(#98D2C0, 40%);
 
 /* grayscale colors */
 $white: #fff;
