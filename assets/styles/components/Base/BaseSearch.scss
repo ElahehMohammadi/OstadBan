@@ -1,0 +1,71 @@
+// BaseSearch components styles
+.base-search-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  .input-container {
+    padding-bottom: 26px;
+    margin-left: 10px;
+    flex-grow: 1;
+    position: relative;
+
+    .base-search-input {
+      height: 37px;
+      background-color: $gray-1 !important;
+      color: $secondary;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 8px 12px;
+      background-image: none !important;
+      font-size: $font-14;
+      font-weight: $font-weight-medium;
+
+      &::placeholder {
+        color: $gray-6;
+        font-size: $font-14;
+        font-weight: $font-weight-medium;
+      }
+
+      &:hover {
+        background-color: $gray-2 !important;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+        border: 1px solid $secondary;
+
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+
+      &.clearable {
+        padding-right: 36px;
+      }
+    }
+
+    .input-remove-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .search-helper-text {
+      font-size: $font-12;
+      font-weight: $font-weight-medium;
+      color: $gray-6;
+      height: 18px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  // remove input's default clear (X) icon
+  input[type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
+}

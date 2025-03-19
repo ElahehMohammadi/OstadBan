@@ -72,7 +72,11 @@ onMounted(() => {
         <span class="item-title">{{ item.title }}</span>
       </div>
 
-      <PhCaretDown v-if="hasSubItems" class="arrow-icon" />
+      <NuxtIcon
+        v-if="hasSubItems"
+        class="arrow-icon"
+        name="outline/caret-down"
+      />
     </nuxt-link>
 
     <template v-else>
@@ -89,7 +93,11 @@ onMounted(() => {
         <span class="item-title">{{ item.title }}</span>
       </div>
 
-      <PhCaretDown v-if="hasSubItems" class="arrow-icon" />
+      <NuxtIcon
+        v-if="hasSubItems"
+        class="arrow-icon"
+        name="outline/caret-down"
+      />
     </template>
   </BButton>
 
@@ -107,5 +115,5 @@ onMounted(() => {
 <style
   lang="scss"
   scoped
-  src="assets/styles/commonComponents/CollapsableItem.scss"
+  src="assets/styles/components/common/CollapsableItem.scss"
 ></style>

@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type { ColorVariant } from "bootstrap-vue-next";
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useRoute } from "nuxt/app";
-import { useUserAuth } from "~/composables/auth/useUserAuth";
 import { useDevice } from "@/.nuxt/imports";
 
 // State
@@ -88,10 +86,9 @@ watch(
             id="header-search-desktop"
             variant="tertiary"
             size="md"
-            icon="PhMagnifyingGlass"
+            icon="outline/magnifying-glass"
             @click="toggleSearchMenu"
           />
-
           <ClientOnly>
             <template #fallback>
               <!-- this will be rendered on server side -->
@@ -121,7 +118,7 @@ watch(
               <ButtonIcon
                 variant="tertiary"
                 size="md"
-                icon="PhList"
+                icon="outline/list"
                 disabled
                 loading
               />
@@ -130,7 +127,7 @@ watch(
             <ButtonIcon
               variant="tertiary"
               size="md"
-              icon="PhList"
+              icon="outline/list"
               @click="openSidebar"
             />
           </ClientOnly>
@@ -148,7 +145,7 @@ watch(
             id="header-search-tablet"
             variant="tertiary"
             size="md"
-            icon="PhMagnifyingGlass"
+            icon="outline/magnifying-glass"
             @click="toggleSearchMenu"
           />
 
@@ -178,7 +175,7 @@ watch(
               <ButtonIcon
                 variant="tertiary"
                 size="md"
-                icon="PhList"
+                icon="outline/list"
                 disabled
                 loading
               />
@@ -187,7 +184,7 @@ watch(
             <ButtonIcon
               variant="tertiary"
               size="md"
-              icon="PhList"
+              icon="outline/list"
               @click="openSidebar"
             />
           </ClientOnly>
@@ -204,7 +201,7 @@ watch(
             id="header-search-mobile"
             variant="tertiary"
             size="md"
-            icon="PhMagnifyingGlass"
+            icon="outline/magnifying-glass"
             @click="toggleSearchMenu"
           />
         </div>

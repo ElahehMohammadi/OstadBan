@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, type PropType } from "vue";
-import avatarFallback from "assets/imgs/logo/logo.svg";
+import avatarFallback from "assets/imgs/avatar-fallback.svg";
 
 // Props
 const props = defineProps({
@@ -16,7 +16,7 @@ const props = defineProps({
 
   src: {
     type: String as PropType<string | null>,
-    default: null,
+    default: undefined,
   },
 
   alt: {
@@ -51,25 +51,25 @@ const onLoadError = () => (avatarNotLoaded.value = true);
   <div class="base-avatar">
     <nuxt-link v-if="to" class="stretched-link" :to="to" :target="linkTarget" />
 
-    <CustomImage
+    <BImg
       v-if="hasAvatar"
       class="base-avatar-image"
       :alt="alt"
-      :token="src"
+      src="assets/imgs/avatar-fallback.svg"
       :width="size"
       :height="size"
       :lazy="false"
-      @img-error="onLoadError"
-    ></CustomImage>
+      @error="onLoadError"
+    ></BImg>
 
-    <CustomImage
+    <BImg
       v-else
       :alt="alt"
       :src="avatarFallback"
       :width="size"
       :height="size"
       :lazy="false"
-    ></CustomImage>
+    ></BImg>
   </div>
 </template>
 

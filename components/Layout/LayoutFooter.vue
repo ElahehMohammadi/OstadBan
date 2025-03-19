@@ -7,7 +7,7 @@ import logo from "assets/imgs/logo/logo.svg";
     <BContainer>
       <BRow class="mb-10">
         <BCol cols="12" md="7">
-          <CustomImage
+          <BImg
             :src="logo"
             alt="sokan-academy-footer-logo"
             width="87px"

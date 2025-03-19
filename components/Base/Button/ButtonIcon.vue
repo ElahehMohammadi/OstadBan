@@ -64,19 +64,19 @@ const props = defineProps({
 const iconSize = computed(() => {
   switch (props.size) {
     case "sm":
-      return 18;
+      return "font-18";
 
     case "md":
-      return 20;
+      return "font-20";
 
     case "lg":
-      return 24;
+      return "font-24";
 
     case "xl":
-      return 32;
+      return "font-32";
 
     default:
-      return 24;
+      return "font-24";
   }
 });
 
@@ -87,7 +87,7 @@ defineEmits(["click"]);
 <template>
   <BaseButton
     class="button-icon"
-    :variant="variant as ColorVariant"
+    :variant="variant"
     :size="size as Size"
     :type="buttonType"
     :to="to"
@@ -96,11 +96,7 @@ defineEmits(["click"]);
     :link-target="linkTarget"
     @click="$emit('click')"
   >
-    <PhHandFist :size="32" />
-    <component :is="icon" :size="iconSize" class="icon line-height-0" />
-    <!--    <BaseTooltip v-if="id" :target="id" :variant="tooltipVariant" :placement="tooltipPlace">-->
-    <!--      {{ tooltipTitle }}-->
-    <!--    </BaseTooltip>-->
+    <NuxtIcon :name="icon" class="icon line-height-0" :class="iconSize" />
   </BaseButton>
 </template>
 

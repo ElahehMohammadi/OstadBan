@@ -93,7 +93,7 @@ defineEmits(["hide"]);
   <div class="search-component">
     <BContainer>
       <button class="search-component-close-btn" @click="$emit('hide')">
-        <PhX class="close-icon" size="24-md-20" />
+        <NuxtIcon name="outline/x" class="close-icon" />
       </button>
 
       <BRow class="justify-content-center">
@@ -136,7 +136,10 @@ defineEmits(["hide"]);
                   >
                     <span>مشاهده نتایج بیشتر</span>
                     <template #leftIcon>
-                      <PhCaretLeft class="me-2" size="18" />
+                      <NuxtIcon
+                        name="outline/caret-left"
+                        class="me-2 font-18"
+                      />
                     </template>
                   </BaseButton>
                 </BCol>
@@ -188,10 +191,18 @@ defineEmits(["hide"]);
     top: 24px;
     right: 32px;
 
+    .close-icon {
+      font-size: $font-24;
+    }
+
     @include md-rule {
       padding: 8px;
       top: 16px;
       right: 16px;
+
+      .close-icon {
+        font-size: $font-20;
+      }
     }
   }
 

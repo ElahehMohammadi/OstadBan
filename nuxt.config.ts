@@ -1,6 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from "path";
-
 export default defineNuxtConfig({
   app: {
     head: {
@@ -25,7 +22,7 @@ export default defineNuxtConfig({
   },
 
   css: ["assets/styles/index.scss"],
-  plugins: ["@/plugins/phosphor-icons.js"],
+
   vite: {
     css: {
       preprocessorOptions: {

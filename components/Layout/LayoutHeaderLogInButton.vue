@@ -15,13 +15,14 @@ defineProps({
 </script>
 
 <template>
+  show
   <BaseButton
     class="login-button"
     variant="secondary"
     :size="size"
     :block="block"
   >
-    <PhSignIn weight="bold" />
+    <NuxtIcon name="outline/sign-in" class="fw-bold" />
     <span>ورود | ثبت‌نام</span>
   </BaseButton>
 </template>

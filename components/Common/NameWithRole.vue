@@ -97,13 +97,12 @@ const textAlignClass = computed(() => {
         <!--        </TextWithTooltip>-->
       </div>
 
-      <PhSealCheck
+      <NuxtIcon
         v-if="hasTeacherRole"
         :id="`${tooltipId}-verification-icon`"
-        :size="32"
-        color="#4d799a"
-        weight="fill"
-        class="role-icon"
+        name="fill/seal-check-fill"
+        class="role-icon font-32 text-secondary"
+        filled
       />
     </div>
 

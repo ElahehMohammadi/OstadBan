@@ -79,7 +79,7 @@ watch(
 
         <!-- TODO: replace with iconToggleButton -->
         <button class="sidebar-close-btn" @click="hide">
-          <PhX size="22" />
+          <NuxtIcon name="outline/x" class="font-22" />
         </button>
       </div>
 
@@ -103,7 +103,7 @@ watch(
         <div class="sidebar-footer">
           <template v-if="!isLoggedIn">
             <BaseButton variant="secondary" size="md">
-              <PhSignIn size="18" weight="bold" />
+              <NuxtIcon name="outline/sign-in" class="font-18 fw-bold" />
               <span class="font-14 text-bold me-2">ورود | ثبت‌نام</span>
             </BaseButton>
           </template>
