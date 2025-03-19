@@ -2,9 +2,10 @@
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useRoute } from "nuxt/app";
 import { useDevice } from "@/.nuxt/imports";
+import { useUserAuth } from "~/composables/auth/useUserAuth";
 
 // State
-const isLoggedIn = true;
+const { isLoggedIn } = useUserAuth();
 const isSearchMenuOpen = ref(false);
 const sidebar = ref();
 const isSticky = ref(false);

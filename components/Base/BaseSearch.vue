@@ -106,5 +106,5 @@ const emit = defineEmits(["update:modelValue", "search", "clear"]);
 <style
   lang="scss"
   scoped
-  src="assets/styles/components/BaseSearch.scss"
+  src="assets/styles/components/Base/BaseSearch.scss"
 ></style>

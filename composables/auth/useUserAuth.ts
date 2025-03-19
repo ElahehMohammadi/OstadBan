@@ -5,7 +5,7 @@ import { reloadNuxtApp, useCookie } from "nuxt/app";
 export const useUserAuth = () => {
   const data1 = computed(() => {
     return {
-      status: "authenticated",
+      status: "unauthenticated",
       data: {
         username: "john_doe",
         avatar: "https://example.com/avatars/john_doe.png",
