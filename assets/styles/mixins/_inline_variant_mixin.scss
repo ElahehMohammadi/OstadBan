@@ -1,0 +1,18 @@
+// Main variant-mode mixin
+@mixin global-link-style($mode: light, $color: $info) {
+  color: $color;
+  text-decoration: none;
+  border-bottom: 1.5px solid $info;
+  line-height: 1.5;
+
+  @include transition-style;
+
+  @if $mode == dark {
+    color: $white;
+    border-bottom-color: $white;
+  }
+
+  // &:hover:not(&.disabled) {
+  //  border-bottom-width: 2px;
+  // }
+}

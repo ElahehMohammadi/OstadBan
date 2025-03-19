@@ -1,0 +1,49 @@
+/* global variables */
+
+/* color palettes */
+// main colors
+$primary: #C4D1DC;
+$secondary: #052E4D;
+$primary-green: #BBD3BE;
+$secondary-green: #DDE5DB;
+$highlight: #4F959D;
+$accent: #609966;
+$neutral-green: #90B894;
+$soft-green: #98D2C0;
+$suggestion-color: #22C55E;
+$success: #25b577;
+$warning: #fca018;
+$danger: #f34158;
+$info: #0062fe;
+
+/* circle colors */
+$circle-success: #22C55E;
+$circle-info: #3B82F6;
+$circle-gold: #D4AF37;
+$circle-warning: #F59E0B;
+
+/*shades*/
+$secondary-shade-1: #9babb8;
+$secondary-shade-2: #cdd5db;
+
+/* grayscale colors */
+$white: #fff;
+$gray-1: #f2f2f2;
+$gray-2: #e6e6e6;
+$gray-3: #dbdbdb;
+$gray-4: #9d9d9d;
+$gray-5: #777;
+$gray-6: #4a4a4a;
+$black: #000;
+
+/* gradient colors */
+$main-gradient: linear-gradient(
+                90deg,
+                $primary 0%,
+                $secondary 20%,
+                $accent 40%,
+                $highlight 60%,
+                $primary-green 80%,
+                $secondary-green 100%
+);
+$gamification-gradient: linear-gradient(270deg, $primary 0%, $accent 100%);

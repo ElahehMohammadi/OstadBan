@@ -1,0 +1,61 @@
+/* font mixin styles */
+
+@mixin text-heading-1 {
+  @include font-style($font-weight-heavy, $font-40, iranyekanx);
+}
+
+@mixin text-heading-2 {
+  @include font-style($font-weight-heavy, $font-32, iranyekanx);
+}
+
+@mixin text-heading-3 {
+  @include font-style($font-weight-extrablack, $font-28, iranyekanx);
+}
+
+@mixin text-heading-4 {
+  @include font-style($font-weight-extrablack, $font-24, iranyekanx);
+}
+
+@mixin text-heading-5 {
+  @include font-style($font-weight-extrablack, $font-22, iranyekanx);
+}
+
+@mixin text-heading-6 {
+  @include font-style($font-weight-extrablack, $font-18, iranyekanx);
+}
+
+@mixin text-title-1 {
+  @include font-style($font-weight-extrabold, $font-20);
+}
+
+@mixin text-title-2 {
+  @include font-style($font-weight-bold, $font-18);
+}
+
+@mixin text-title-3 {
+  @include font-style($font-weight-bold, $font-16);
+}
+
+@mixin text-title-4 {
+  @include font-style($font-weight-bold, $font-14);
+}
+
+@mixin text-title-5 {
+  @include font-style($font-weight-bold, $font-12);
+}
+
+@mixin text-body {
+  @include font-style($font-weight-medium, $font-16);
+}
+
+@mixin text-meta-1 {
+  @include font-style($font-weight-medium, $font-14);
+}
+
+@mixin text-meta-2 {
+  @include font-style($font-weight-medium, $font-12);
+}
+
+@mixin text-info {
+  @include font-style($font-weight-bold, $font-12);
+}

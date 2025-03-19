@@ -1,0 +1,60 @@
+// CollapsableItem styles
+
+.collapsable-item {
+  width: 100%;
+  background-color: $white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 4px;
+
+  &:hover {
+    background-color: $gray-1;
+  }
+
+  &.active {
+    background-color: $gray-2;
+
+    .item-title {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .item-icon {
+    margin-left: 12px;
+  }
+
+  .item-title {
+    color: $secondary;
+    font-size: $font-14;
+    font-weight: $font-weight-medium;
+  }
+
+  .arrow-icon {
+    color: $secondary;
+    transition: $global-transition;
+  }
+
+  &.visible {
+    .arrow-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.sub-items-container {
+  margin-right: 44px;
+}
+
+.link-item {
+  width: inherit;
+  color: $secondary;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}

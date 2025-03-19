@@ -1,0 +1,6 @@
+/* card mixin styles */
+
+@mixin card-border-style($radius: 20px) {
+  border-radius: $radius;
+  border: 2px solid $gray-2;
+}
